@@ -8,6 +8,15 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <div id="login_form">
+        <button id="cut" onclick="document.getElementById('login_form').style.display='none'">+</button>
+        <form action="">
+            <h2>Login</h2>
+            <input type="text" placeholder="Enter your name">
+            <input type="text" placeholder="Enter your password">
+            <button id="btn">Login</button>
+        </form>
+     </div>
     <div class="nav">
         <div class="left_nav">
             <img src="assets/images/logo.avif" alt="">
@@ -17,16 +26,42 @@
             <a href="index.html"  id="current">Home</a>
             <a href="donate.html">Donate</a>
             <a href="">Camps</a>
-            <a href="">Inventory</a>
+            <a href="inventory.html">Inventory</a>
             <a href="">Guidlines</a>
             <p>
-              <a href="">Login</a>
+              <a href="#" onclick="document.getElementById('login_form').style.display='flex'">Login</a>
               /
               <a href="">Register</a>
             </p>
         </div>
    </div>
-   <div class="main">
+   <div class="hero">
+        <h1>Give the gift of life </h1>
+        <p>Donate blood & Save Lives</p>
+        <a href="" class="btn btn3">Donate Now</a>
+   </div>
+   <div class="high_lights">
+        <div class="high_lights_con">
+            <div class="icon">🩸</div>
+            <p><b>Become a Donor</b>
+                Join us and save lives.
+            </p>
+        </div>
+        <div class="high_lights_con">
+            <div class="icon">🩸</div>
+            <p><b>Request Blood</b>
+                Need blood urgently? Rwquest here.
+
+            </p>
+        </div>
+        <div class="high_lights_con">
+            <div class="icon">🔎</div>
+            <p><b>Check Availability</b>
+                Search for blood availability.
+            </p>
+        </div>
+   </div>
+   <!--<div class="main">
       <div class="main_left">
           <p class="tagline">🩸 Save Lives • Donate Blood</p>
         <h1>Your one drop of blood can save someones life</h1>
@@ -51,6 +86,68 @@
             <div class="row">O-<div class="cldr"><div class="range range8"></div></div><span>16 Units</span></div>
         </div>
       </div>
+   </div>-->
+   <div class="main">
+        <div class="main_left">
+            <h3>About Our Blood Bank</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet sunt neque nihil velit totam modi assumenda exercitationem asperiores, dicta laudantium soluta cupiditate quisquam aperiam veritatis et, fuga commodi. Dolorum.</p>
+            <a href="" class="btn btn3">Learn More</a>
+        </div>
+        <div class="main_right">
+            <h3>Eligibility Criteria</h3>
+            <div class="criteria">
+                <div class="criteria_card">
+                    <img src="assets/images/Screenshot 2026-04-07 204917.png" alt="">
+                    <p><b>Age:</b> 16-65 Years</p>
+                </div>
+                <div class="criteria_card">
+                    <img src="assets/images/Screenshot 2026-04-07 204907.png" alt="">
+                    <p><b>Weight:</b> Minimum 50kg</p>
+                </div>
+                <div class="criteria_card">
+                    <img src="assets/images/Screenshot 2026-04-07 204857.png" alt="">
+                    <p><b>Health:</b> in Good Condition</p>
+                </div>
+            </div>
+            <div class="buttons">
+                <select name="" id="">
+                    <option value="">Blood Group</option>
+                </select>
+                <select name="" id="">
+                    <option value="">Location</option>
+                </select>
+                <select name="" id="">
+                    <option value=""></option>
+                </select>
+                <a href="" class="btn btn4">Search</a>
+            </div>
+        </div>
+   </div>
+   <div class="request_con">
+        <h1 class="heading rsq_heading">Recent Blood Requests</h1>
+        <div class="requests">
+            <div class="rsq urgent_rsq">
+                <p class="p1"><b>AB+</b> Blood Needed</p>
+                <p>in City Hospital</p>
+                <div class="urgent">Urgent</div>
+                <a href="" class="btn details">View Details</a>
+            </div>
+            <div class="rsq">
+                <p class="p1"><b>O-</b> Blood Required</p>
+                <p>in medical center</p>
+                <a href="" class="btn details">View Details</a>
+            </div>
+            <div class="rsq">
+                <p class="p1"><b>A+</b> Blood Rquired</p>
+                <p>for surgery</p>
+                <a href="" class="btn details">View Details</a>
+            </div>
+            <div class="rsq">
+                <p class="p1"><b>A+</b> Blood Rquired</p>
+                <p>for surgery</p>
+                <a href="" class="btn details">View Details</a>
+            </div>
+        </div>
    </div>
    <div class="service">
         <h1 class="heading">Our Services</h1>
@@ -93,6 +190,46 @@
         </div>
      </div>
      </div>
-     <div class="footer"></div>
+     <div class="footer_top">
+        <div class="footer_top_left">
+            <h3>Why Donate Blood</h3>
+            <p><img src="assets/images/red-heart-symbol-with-medical-cross-vector-removebg-preview.png" alt=""> Save Lives</p>
+            <hr>
+            <p><img src="assets/images/firstaid-removebg-preview.png" alt=""> Free Health Checkup</p>
+            <hr>
+            <p><img src="assets/images/heart-removebg-preview.png" alt=""> Quality & Easy Process</p>
+            <hr>
+        </div>
+        <hr>
+        <div class="footer_top_right">
+            <h3>How to Donate</h3>
+            <p><b>1</b> Register Online</p>
+            <hr>
+            <p><b>2</b> Schedule Appoinment</p>
+            <hr>
+            <p><b>3</b> Donate Blood</p>
+            <hr>
+            <p><b>4</b> Rest & Refresh</p>
+            <hr>
+        </div>
+     </div>
+     <div class="footer">
+        <div class="footer_content">
+            <a href="" id="current">Home</a>
+            <hr>
+            <a href="">Camps</a>
+            <hr>
+            <a href="">Donate</a>
+            <hr>
+            <a href="">Inventory</a>
+            <hr>
+            <a href="">About Us</a>
+            <hr>
+            <a href="">Guidlines</a>
+            <hr>
+            <a href="">Contact Us</a>
+        </div>
+        <p>&copy 2026 Red Blood System. All rights reserved.</p>
+     </div>
 </body>
 </html>

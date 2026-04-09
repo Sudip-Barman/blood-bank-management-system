@@ -5,9 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/inventory.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <div id="blood_request">
+        <div class="request_card">
+            <button id="cut" onclick="document.getElementById('blood_request').style.display='none'">+</button>
+            <select name="" id="">
+                <option value="">--Select State--</option>
+            </select>
+            <select name="" id="">
+                <option value="">--Select Dist--</option>
+            </select>
+            <select name="" id="">
+                <option value="">--Select Hospital/camp--</option>
+            </select>
+            <input type="search" placeholder="search">
+        </div>
+    </div>
     <div class="nav">
         <div class="left_nav">
             <img src="assets/images/logo.avif" alt="">
@@ -17,24 +34,148 @@
             <a href="index.html">Home</a>
             <a href="">Donate</a>
             <a href="">Camps</a>
-            <a href="">Inventory</a>
+            <a href="" id="current">Inventory</a>
             <a href="">Guidlines</a>
             <input type="search" placeholder="Search here" id="nav_search">
-    </div>
+        </div>
    </div>
    <div class="main">
-        <div class="con">
-            <select name="" id="">
-                <option value="">Select state</option>
-            </select>
-            <select name="" id="">
-                <option value="">Select Dist</option>
-            </select>
+        <div class="banner">
+            <h1>Real-Time Blood Stock & Donor Portal</h1>
+            <p>View live inventory, Chck availability, and register to save lives.</p>
         </div>
-        <div class="card">
-            
+        <div class="inventory">
+            <div class="card top_card">
+                <h2>Real-time Blood Stock Inventory</h2>
+                <p>Check current availability and volume for each blood type.</p>
+            </div>
+            <div class="card">
+                <div class="card_content top_content">
+                    <p>🩸<b>A+</b></p>
+                </div>
+                <div class="card_content lower_content  left">
+                    <p><i class="fa-regular fa-address-card"></i> Units</p>
+                    <p><i class="fa-regular fa-credit-card"></i> Status</p>
+                </div>
+                <div class="card_content lower_content">
+                    <div class="unit-status unit">18 Units</div>
+                    <div class="unit-status status">Adequate Stock</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_content top_content">
+                    <p>🩸<b>A-</b></p>
+                </div>
+                <div class="card_content lower_content left">
+                    <p><i class="fa-regular fa-address-card"></i> Units</p>
+                    <p><i class="fa-regular fa-credit-card"></i> Status</p>
+                </div>
+                <div class="card_content lower_content">
+                    <div class="unit-status unit">18 Units</div>
+                    <div class="unit-status status">Adequate Stock</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_content top_content">
+                    <p>🩸<b>B+</b></p>
+                </div>
+                <div class="card_content lower_content left">
+                    <p><i class="fa-regular fa-address-card"></i> Units</p>
+                    <p><i class="fa-regular fa-credit-card"></i> Status</p>
+                </div>
+                <div class="card_content lower_content">
+                    <div class="unit-status unit">9 Units</div>
+                    <div class="unit-status status low-stock">Low stock</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_content top_content">
+                    <p>🩸<b>B-</b></p>
+                </div>
+                <div class="card_content lower_content left">
+                    <p><i class="fa-regular fa-address-card"></i> Units</p>
+                    <p><i class="fa-regular fa-credit-card"></i> Status</p>
+                </div>
+                <div class="card_content lower_content">
+                    <div class="unit-status unit">10 Units</div>
+                    <div class="unit-status status  low-stock">Low Stock</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_content top_content">
+                    <p>🩸<b>O+</b></p>
+                </div>
+                <div class="card_content lower_content left">
+                    <p><i class="fa-regular fa-address-card"></i> Units</p>
+                    <p><i class="fa-regular fa-credit-card"></i> Status</p>
+                </div>
+                <div class="card_content lower_content">
+                    <div class="unit-status unit">3 Units</div>
+                    <div class="unit-status status critical-stock">Critical</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_content top_content">
+                    <p>🩸<b>O-</b></p>
+                </div>
+                <div class="card_content lower_content left">
+                    <p><i class="fa-regular fa-address-card"></i> Units</p>
+                    <p><i class="fa-regular fa-credit-card"></i> Status</p>
+                </div>
+                <div class="card_content lower_content">
+                    <div class="unit-status unit">3 Units</div>
+                    <div class="unit-status status critical-stock">Critical</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_content top_content">
+                    <p>🩸<b>AB+</b></p>
+                </div>
+                <div class="card_content lower_content left">
+                    <p><i class="fa-regular fa-address-card"></i> Units</p>
+                    <p><i class="fa-regular fa-credit-card"></i> Status</p>
+                </div>
+                <div class="card_content lower_content">
+                    <div class="unit-status unit">25 Units</div>
+                    <div class="unit-status status">High</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_content top_content">
+                    <p>🩸<b>AB-</b></p>
+                </div>
+                <div class="card_content lower_content left">
+                    <p><i class="fa-regular fa-address-card"></i> Units</p>
+                    <p><i class="fa-regular fa-credit-card"></i> Status</p>
+                </div>
+                <div class="card_content lower_content">
+                    <div class="unit-status unit">16 Units</div>
+                    <div class="unit-status status">High</div>
+                </div>
+            </div>
+            <div class="card bottom_card">
+                <a href="" class="btn btn1">Become a Donor</a>
+                <a href="#" class="btn btn2" onclick="document.getElementById('blood_request').style.display='flex'">Request Blood</a>
+            </div>
         </div>
-        
    </div>
+   <div class="footer">
+        <div class="footer_content">
+            <a href="index.html">Home</a>
+            <hr>
+            <a href="">Camps</a>
+            <hr>
+            <a href="">Donate</a>
+            <hr>
+            <a href=""  id="current">Inventory</a>
+            <hr>
+            <a href="">About Us</a>
+            <hr>
+            <a href="">Guidlines</a>
+            <hr>
+            <a href="">Contact Us</a>
+        </div>
+        <p>&copy 2026 Red Blood System. All rights reserved.</p>
+     </div>
 </body>
 </html>

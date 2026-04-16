@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -13,7 +14,7 @@
         <form action="">
             <h2>Login</h2>
             <input type="text" placeholder="Enter your name">
-            <input type="text" placeholder="Enter your password">
+            <input type="password" placeholder="Enter your password">
             <button id="btn">Login</button>
         </form>
      </div>
@@ -61,37 +62,15 @@
             </p>
         </div>
    </div>
-   <!--<div class="main">
-      <div class="main_left">
-          <p class="tagline">🩸 Save Lives • Donate Blood</p>
-        <h1>Your one drop of blood can save someones life</h1>
-        <p>You can save someone by donating your priceless blood.</p>
-        <div class="blood_bank bank1"></div>
-        <div class="blood_bank bank2"></div>
-        <div class="buttons">
-          <a href="" class="btn btn1">Donate Blood</a>
-          <a href="" class="btn btn2">Request Blood</a>
-        </div>
-      </div>
-      <div class="main_right">
-        <div class="live_inventory">
-            <h2>Live Inventory</h2>
-            <div class="row">A+<div class="cldr"><div class="range range1"></div></div><span>72 Units</span></div>
-            <div class="row">B+<div class="cldr"><div class="range range2"></div></div><span>65 Units</span></div>
-            <div class="row">A-<div class="cldr"><div class="range range3"></div></div><span>46 Units</span></div>
-            <div class="row">B-<div class="cldr"><div class="range range4"></div></div><span>48 Units</span></div>
-            <div class="row">AB+<div class="cldr"><div class="range range5"></div></div><span>92 Units</span></div>
-            <div class="row">AB-<div class="cldr"><div class="range range6"></div></div><span>56 Units</span></div>
-            <div class="row">O+<div class="cldr"><div class="range range7"></div></div><span>36 Units</span></div>
-            <div class="row">O-<div class="cldr"><div class="range range8"></div></div><span>16 Units</span></div>
-        </div>
-      </div>
-   </div>-->
+   <div id="learn-more">
+    <button onclick="document.getElementById('learn-more').style.display='none'">+</button>
+    <iframe src="learn-more.html" frameborder="0"></iframe>
+   </div>
    <div class="main">
         <div class="main_left">
             <h3>About Our Blood Bank</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet sunt neque nihil velit totam modi assumenda exercitationem asperiores, dicta laudantium soluta cupiditate quisquam aperiam veritatis et, fuga commodi. Dolorum.</p>
-            <a href="" class="btn btn3">Learn More</a>
+            <a href="#" class="btn btn3" onclick="document.getElementById('learn-more').style.display='flex'">Learn More</a>
         </div>
         <div class="main_right">
             <h3>Eligibility Criteria</h3>
@@ -213,7 +192,7 @@
             <hr>
         </div>
      </div>
-     <div class="footer">
+     <!-- <div class="footer">
         <div class="footer_content">
             <a href="" id="current">Home</a>
             <hr>
@@ -230,6 +209,37 @@
             <a href="">Contact Us</a>
         </div>
         <p>&copy 2026 Red Blood System. All rights reserved.</p>
+     </div> -->
+     <div class="footer">
+        <div class="footer_con top_con">
+            <h2><i class="fa-solid fa-droplet"></i>RED BLOOD</h2>
+        </div>
+        <div class="footer_con center_con">
+            <div class="footer_content about">
+                <!-- <p>“Your blood is their second chance.”</p> -->
+                 <h2>About us</h2>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates sed nihil, magnam sunt minima quia labore alias et? Rerum ad officiis mollitia velit id hic!</p>
+            </div>
+            <div class="footer_content quick_links">
+                <h3>Quick Links</h3>
+                <a href="">Donate</a>
+                <a href="">Camps</a>
+                <a href="">Inventory</a>
+                <a href="">Guidlines</a>
+                <a href="">About Us</a>
+                <a href="">Contact Us</a>
+            </div>
+            <div class="footer_content contact">
+                <h3>Contcat Us</h3>
+                <p><i class="fa-solid fa-location-dot"></i> 123 Blood Bank Road, City, State 123456</p>
+                <p><i class="fa-solid fa-phone-volume"></i> +91 8946587985</p>
+                <p><i class="fa-solid fa-envelope"></i> info@redbloodbanksystem.com</p>
+                <p id="social_link"><i class="fa-brands fa-square-facebook"></i><i class="fa-brands fa-instagram"></i><i class="fa-brands fa-youtube"></i><i class="fa-brands fa-twitter"></i></p>
+            </div>
+        </div>
+        <div class="footer_con bottom_con">
+            <p> &copy 2026 Red Blood System. All rights reserved.</p>
+        </div>
      </div>
 </body>
 </html>

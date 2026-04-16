@@ -1,44 +1,77 @@
-*{
-    margin:0;
-    padding: 0;
-}
 .footer{
-    height: 20vh;
+    height: 55vh;
     width: 100%;
-    background-image: url('../images/Gemini_Generated_Image_52dhtn52dhtn52dh.png');
-    background-repeat: no-repeat;
+    background-image:url('../images/footer.png');
     background-size: 100% 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5%;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns:90%;
+    grid-template-rows: 20% 60% 20%;
+    justify-content:center ;
     color: white;
+    h2{
+        width: 100%;
+    }
+    i{
+        padding: 5px;
+        border-radius: 50%;
+        color: rgb(255, 44, 44);
+        background-color: white;
+        margin-right:1%;
+    }
+
 }
 .footer a{
     text-decoration: none;
     color: white;
+
 }
-.footer hr{
-    height: 60%;
-}
-.footer_content{
-    height: 30%;
-    width: 55%;
+.top_con{
+    display: flex;
+    align-items: flex-end;
     border-bottom: 1px solid silver;
+
+}
+.center_con{
+    display: grid;
+    grid-template-columns: 50% 20% 30%;
+}
+.bottom_con{
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 3%;
+    border-top: 1px solid silver;
 }
-.footer #current{
-    color: white;
+.footer_content{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    align-items: start;
+    gap: 5%;
+    i{
+        padding: 0;
+        color: white;
+        background-color: transparent;
+    }
 }
-.footer #current::before{
-    content: "";
-    height: 1px;
+#social_link{
+    display: flex;
+    gap: 5%;
+    margin-top: 2%;
+    i{
+        padding: 5px;
+        border-radius: 30%;
+        color: red;
+        background-color: white;
+    }
+}
+.footer_content h2{
+    font-size: 3vh;
+}
+.footer_content p{
     width: 100%;
-    background-color:white;
+}
+.about p{
+    width: 60%;
+}
+.footer_con{
+    padding: 1%;
 }

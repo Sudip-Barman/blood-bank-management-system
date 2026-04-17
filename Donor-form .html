@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            overflow-x: hidden;
+        }
+        .picture{
+            height: 60vh;
+            width: 100%;
+            background-image: url("assets/images/HERO-image.png");
+            background-repeat: no-repeat;
+            /* background-position: center; */
+            background-size: 100% 100%;
+            object-fit: cover;
+        }
+        .text{
+            max-width: 600px;
+            position: absolute;
+            top: 25%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            color: white;
+        }
+        .text h1{
+            font-size: 4vw;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .text p{
+            font-size: 2vw;
+            color: #eee;
+        }
+        .form-container {
+            max-width: 700px;
+            margin: -80px auto 50px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            padding: 40px 50px;
+            position: relative;
+            /* z-index: 10; */
+        }
+
+        .form-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-title h2 {
+            color: #c8102e;
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .form-title p {
+          color: #666;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #444;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 14px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #c8102e;
+            outline: none;
+        }
+
+        .icon-input {
+            position: relative;
+        }
+
+        .icon-input i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 18px;
+        }
+        .icon-input input,
+        .icon-input select {
+            padding-left: 45px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        textarea::placeholder{
+            padding-left: 20px;
+        }
+        .submit-btn {
+            grid-column: 1 / -1;
+            background: #c8102e;
+            color: white;
+            border: none;
+            padding: 16px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #a00d24;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            height: 20vh;
+            width: 100%;
+            background-image: url('assets/images/wave-foot.jpeg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            object-fit: cover;
+        }
+        #login_form{
+    height:100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.303);
+    position:fixed;
+    /* top: 0; */
+    z-index: 5;
+    display: none;
+}
+#login_form form{
+    height:35%;
+    width: 20%;
+    border-radius:2vh;
+    border: 1px solid silver;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+
+}
+#login_form form input{
+    height: 35px ;
+    width:80%;
+    padding-left: 5%;
+    border-radius: 1vh;
+    border: 1px solid silver;
+    
+}
+#btn{
+    height: 35px;
+    width: 85%;
+    border-radius: 1vh;
+    border: 1px solid silver;
+    background-color: transparent;
+}
+#btn::placeholder{
+    color: black;
+}
+#cut{
+    font-size: 6vh;
+    color: white;
+    background-color: transparent;
+    border: none;
+    transform: rotateZ(45deg);
+    position: relative;
+    top: -25%;
+    left: 30%;
+}
+#cut:hover{
+    transform: translateY(-2px) rotateZ(45deg);
+    filter: drop-shadow(0px 1px 2px);
+}
+        </style>
+        </head>
+        <body>
+            <div id="login_form">
+        <button id="cut" onclick="document.getElementById('login_form').style.display='none'">+</button>
+        <form action="">
+            <h2>Login</h2>
+            <input type="text" placeholder="Enter your name">
+            <input type="password" placeholder="Enter your password">
+            <button id="btn">Login</button>
+        </form>
+     </div>
+             <div class="nav">
+        <div class="left_nav">
+            <img src="assets/images/logo.avif" alt="">
+            <h2>RED BLOOD</h2>
+        </div>
+        <div class="right_nav">
+            <a href="index.html"  id="current">Home</a>
+            <a href="donate.html">Donate</a>
+            <a href="">Camps</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="">Guidlines</a>
+            <p>
+              <a href="#" onclick="document.getElementById('login_form').style.display='flex'">Login</a>
+            </p>
+        </div>
+   </div>
+        <main>
+            <div class="picture">
+                <div class="text">
+                    <h1>Join & Save Lives</h1>
+                    <p>Register as a donor and-</p> 
+                    <p>make a difference</p>
+                </div>
+            </div>
+            <div class="form-container">
+                <div class="form-title">
+                <h2>Donor Registration</h2>
+                <p>Register as a donor and make a difference</p>
+                </div>
+
+                <form>
+                <div>
+                    <label for="fname">Full Name</label>
+                    <div class="icon-input">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="fname" placeholder="Enter your full name" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="email">Email Address</label>
+                    <div class="icon-input">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="example@email.com" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="phone">Phone Number</label>
+                    <div class="icon-input">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="phone" placeholder="+91 98765 43210" required>
+                    </div>
+                </div>
+                <div>
+                    <label for="bloodGroup">Blood Group</label>
+                    <div class="icon-input">
+                    <i class="fas fa-droplet"></i>
+                    <select id="bloodGroup" required>
+                        <option value="">Select Blood Group</option>
+                        <option value="a+">A+</option>
+                        <option value="a-">A-</option>
+                        <option value="b+">B+</option>
+                        <option value="b-">B-</option>
+                        <option value="ab+">AB+</option>
+                        <option value="ab-">AB-</option>
+                        <option value="o+">O+</option>
+                        <option value="o-">O-</option>
+                        <option value="golden-rh">Rh-Null</option>
+                    </select>
+                    </div>
+                </div>
+                <div>
+                    <label for="otp">OTP</label>
+                    <div class="icon-input">
+                    <i class="fas fa-key"></i>
+                    <input type="text" id="otp" placeholder="Enter OTP" required>
+                    </div>
+                </div>
+                <div>
+                    <label for="age">Age</label>
+                    <div class="icon-input">
+                    <i class="fas fa-calendar"></i>
+                    <input type="number" id="age" min="18" max="65" placeholder="25" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="location">Location</label>
+                    <div class="icon-input">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <select id="location" required>
+                        <option value="">Select City</option>
+                        <option value="mum">Mumbai</option>
+                        <option value="del">Delhi</option>
+                        <option value="ban">Bangalore</option>
+                        <option value="che">Chennai</option>
+                        <option value="hyd">Hyderabad</option>
+                        <option value="kol">Kolkata</option>
+                    </select>
+                    </div>
+                </div>
+                <div>
+                    <label for="state">State</label>
+                    <div class="icon-input">
+                    <i class="fas fa-flag"></i>
+                    <select id="state" required>
+                        <option value="">Select State</option>
+                        <option value="maharashtra">Maharashtra</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="karnataka">Karnataka</option>
+                        <option value="tamil-nadu">Tamil Nadu</option>
+                        <option value="telangana">Telangana</option>
+                        <option value="west-bengal">West Bengal</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="full-width">
+                    <label for="address">Address</label>
+                    <div class="icon-input">
+                    <i class="fas fa-home" style="top: 25px;"></i>
+                    <textarea id="address" placeholder="Enter your full address" required></textarea>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="password">Password</label>
+                    <div class="icon-input">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Create password" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="icon-input">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-heart"></i> Register Now
+                </button>
+                </form>
+            </div>
+            <footer>
+            </footer>
+        </main> 
+</body>
+</html>

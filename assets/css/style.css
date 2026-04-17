@@ -6,6 +6,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    width: 110%;
 }
 h1, h2 {
     font-family: 'Montserrat', sans-serif;
@@ -13,7 +14,7 @@ h1, h2 {
 /* Thhis is our nabar section */
 .nav{
     height:10vh;
-    width:100%;
+    width:100vw;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -674,6 +675,9 @@ form input{
     padding: 1%;
 }
 @media(max-width:1000px){
+    body{
+        width: 100vw;
+    }
     .nav a{
         display: none;
     }
@@ -700,13 +704,16 @@ form input{
         height: 35%;
         width: 70%;
     }
-    .heading{
-        font-size: xx-large;
+    .rsq_heading{
+        font-size:2.5vh;
+        /* display: none; */
     }
     .rsq_heading::before{
-        width: 100px;
+        content: "";
+        width: 1%;
     }
     .rsq_heading::after{
-        width: 100px;
+        content: "";
+        width: 1%;
     }
 }
